@@ -1,0 +1,12 @@
+.crop{
+    white-space: nowrap;
+    overflow: hidden;
+}
+.cropBackground{
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+div{
+    float:left;
+}

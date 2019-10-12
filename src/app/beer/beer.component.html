@@ -1,0 +1,65 @@
+<div class="panel panel-info">
+        <div class="panel-heading">
+           {{title}}
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    Filter By:
+                </div>
+                <div class="col-md-4">
+                    <input type ="text" placeholder="enter your text" 
+                    [(ngModel)]="userSearch"/>
+                    Searched Size: {{beerCount}}
+                </div>
+            </div>
+            <div class="row">
+            </div>
+    
+            <div class="table-responsive">
+                <table class="table" >
+                    <thead>
+                        <tr style="color:teal">
+                      
+                            <th>
+                                <button class="btn btn-danger"
+                                (click)="toggleImage()">
+                                    Show Image
+                                </button>
+                            </th>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>First Brewed</th>
+                            <th>Description</th>
+                            <th>PH Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let beer of updateBeerCount(beerlist | beerfilter:userSearch)" style="width:100%">
+                                <td>
+                                        <img [src]="beer.image_url" *ngIf="showTable" height="200" width="100"/>
+                                </td>
+                            <td>
+                                {{beer.name | titlecase}}
+                            </td>
+                            <td>
+                                {{beer.id}}
+                            </td>
+                            <td>
+                                {{beer.first_brewed}}
+                            </td>
+                            <td style="width:30%">
+                                {{beer.description}}
+                            </td>
+                            <td>
+                                <app-star [rating]="beer.ph"
+                            (ratingClicked)="dataRecive($event)"></app-star>
+                            </td>
+                        </tr>
+                    </tbody>
+    
+                </table>
+            </div>
+    
+        </div>
+    </div>
