@@ -3,7 +3,7 @@ import { IBeer } from './beer.model';
 import { BeerService } from "./beer.service";
 
 @Component({
-    selector: 'app-beer ',
+    selector: 'app-beer',
     templateUrl: './beer.component.html'
 })
 export class BeerComponent implements OnInit{

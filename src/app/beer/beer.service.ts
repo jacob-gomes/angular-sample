@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 
 export class BeerService {
 
+
     private beerUrl = 'https://api.punkapi.com/v2/beers';
     constructor(private http: HttpClient) {}
 
@@ -14,5 +15,7 @@ export class BeerService {
         console.log("In getBeers");
         return  this.http.get<IBeer[]>(this.beerUrl);
     }
-
+    getBeerDetails(id: number): Observable<IBeer[]>  {
+        return  this.http.get<IBeer[]>('${this.beerUrl}/${id}');
+    }
 }
