@@ -16,6 +16,6 @@ export class BeerService {
         return  this.http.get<IBeer[]>(this.beerUrl);
     }
     getBeerDetails(id: number): Observable<IBeer[]>  {
-        return  this.http.get<IBeer[]>('${this.beerUrl}/${id}');
+        return  this.http.get<IBeer[]>(this.beerUrl+'/'+id);
     }
 }

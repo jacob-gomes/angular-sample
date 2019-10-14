@@ -40,7 +40,10 @@
                                         <img [src]="beer.image_url" *ngIf="showTable" height="200" width="100"/>
                                 </td>
                             <td>
-                                {{beer.name | titlecase}}
+                                    <a [routerLink]="['/beers',beer.id]">
+                                    {{beer.name | titlecase}}
+                                    </a>
+                               
                             </td>
                             <td>
                                 {{beer.id}}

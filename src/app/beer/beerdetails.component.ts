@@ -22,4 +22,9 @@ export class BeerDetailsComponent implements OnInit{
         this.beerService.getBeerDetails(this.id)
             .subscribe((data) => this.details = data);
     }
+
+    onBack():void {
+        this.router.navigate(["beers"]);
+
+    }
 }
