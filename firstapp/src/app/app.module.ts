@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductModule } from './product/product.module';
 import { BeerModule } from './beer/beer.module';
 import { AppRoutingModule } from './app.routing-module';
+import { TemplateFormComponent } from './template-form-component/template-form-component.component';
 
 @NgModule({
 
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app.routing-module';
 
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TemplateFormComponent
   ],
  
   bootstrap: [AppComponent]
