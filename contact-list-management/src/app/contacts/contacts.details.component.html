@@ -1,0 +1,18 @@
+<div class="panel panel-info">
+        <div class="panel-heading">
+            Contact Details Page
+        </div>
+        <div class="panel-body">
+            <div class="jumbotron">
+                <h4> Contact Name: {{contact.name}}</h4>
+                <h4 *ngIf="contact.emailId && contact.emailId.length"> Email Id: {{contact.emailId}}</h4>
+                <h4 *ngIf="contact.phoneNumber && contact.phoneNumber.length"> Phone number: {{contact.phoneNumber}}</h4>
+                <h4 *ngIf="contact.address && contact.address.length"> Address: {{contact.address}}</h4>
+            
+            </div>
+            <button class="btn btn-danger"
+                (click)="onBack()">
+                <<<Back
+            </button>
+        </div>
+    </div>

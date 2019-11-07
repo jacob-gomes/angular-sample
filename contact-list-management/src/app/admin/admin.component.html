@@ -1,0 +1,35 @@
+<div class="table-responnsive">
+        <a [routerLink]="['/user', { outlets: {'postlogin':['new-user']}}]" class="btn btn-info btn-lg">
+                <span class="glyphicon"></span> Create New User
+              </a>
+            <table class="table" *ngIf="users && users.length; else noData">
+                <thead>
+                    <tr style="color:teal">
+                      
+                        <th>
+                            UserName
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td><a (click)="getDetails(user.userId)">
+                                {{user.name | titlecase}}
+                            </a>
+                        </td>
+                        <td>
+                            <button class="btn btn-success" (click)="update(user.userId)">
+                                Update
+                            </button>
+                        </td>
+                        <td>            
+                            <button class="btn btn-success" (click)="delete(user.userId)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>

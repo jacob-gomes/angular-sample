@@ -6,14 +6,14 @@ import { BeerComponent } from './beer/beer.component';
 import { BeerDetailsComponent } from './beer/beerdetails.component';
 import { NotFoundComponent } from './shared/notFound.component';
 import { BeerRouterGaurds } from './beer/beer.router-gaurd';
-import { TemplateFormComponent } from './template-form-component/template-form-component.component';
+import { EmployeeComponent } from './template-form-component/template-form-component.component';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'products', component: ProductComponent},
     {path: 'beers', component: BeerComponent},
     {path: 'beers/:id', canActivate: [BeerRouterGaurds], component: BeerDetailsComponent},
-    {path: 'template', component: TemplateFormComponent},
+    {path: 'template', component: EmployeeComponent},
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: '**', component: NotFoundComponent}
 ];

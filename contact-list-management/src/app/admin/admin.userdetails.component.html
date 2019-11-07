@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+        <div class="panel-heading">
+            User Details Page
+        </div>
+        <div class="panel-body">
+            <div class="jumbotron">
+                <h4> Contact Name: {{user.name}}</h4>
+                <h4 *ngIf="user.userId && user.userId.length"> User Id: {{user.userId}}</h4>
+                <h4 *ngIf="user.emailId && user.emailId.length"> Email Id: {{user.emailId}}</h4>
+                <h4 *ngIf="user.phoneNumber && user.phoneNumber.length"> Phone number: {{user.phoneNumber}}</h4>
+                <h4 *ngIf="user.address && user.address.length"> Address: {{user.address}}</h4>
+            
+            </div>
+            <button class="btn btn-danger"
+                (click)="onBack()">
+                <<<Back
+            </button>
+        </div>
+    </div>

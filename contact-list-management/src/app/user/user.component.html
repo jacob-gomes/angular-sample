@@ -1,0 +1,21 @@
+<div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a [routerLink]="['/user', { outlets: {'postlogin':['contact-management']}}]">Contact Management</a></li>
+            <li *ngIf="isAdmin"><a [routerLink]="['/user', { outlets: {'postlogin':['user-management']}}]">User Management</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <hr/>
+    <button type="button" class="btn btn-default btn-sm" (click)="logout()">
+        <span class="glyphicon glyphicon-log-out"></span> Log out
+      </button>
+    <router-outlet name= "postlogin">
+  
+    </router-outlet>
+    <hr/>
+  </div>

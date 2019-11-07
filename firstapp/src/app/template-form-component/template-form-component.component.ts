@@ -5,7 +5,7 @@ import { FormPosterService } from './formPoster.service';
 
 @Component({
     selector: 'app-employee',
-    templateUrl: './employeeForm.component.html'
+    templateUrl: './template-form-component.component.html'
 })
 
 export class EmployeeComponent {

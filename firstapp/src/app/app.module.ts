@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductModule } from './product/product.module';
 import { BeerModule } from './beer/beer.module';
 import { AppRoutingModule } from './app.routing-module';
-import { TemplateFormComponent } from './template-form-component/template-form-component.component';
+import { EmployeeComponent } from './template-form-component/template-form-component.component';
 
 @NgModule({
 
@@ -24,7 +24,7 @@ import { TemplateFormComponent } from './template-form-component/template-form-c
   declarations: [
     AppComponent,
     HomeComponent,
-    TemplateFormComponent
+    EmployeeComponent
   ],
  
   bootstrap: [AppComponent]
